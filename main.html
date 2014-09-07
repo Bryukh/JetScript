@@ -21,6 +21,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <!--Custom style-->
     <link rel="stylesheet" href="style.css">
+    <!--CodeMirror-->
+    <script src="codemirror/codemirror.js"></script>
+    <link rel="stylesheet" href="codemirror/codemirror.css">
+    <!--<link rel="stylesheet" href="codemirror/theme/elegant.css">-->
+    <script src="codemirror/python/python.js"></script>
 
 </head>
 
@@ -116,10 +121,12 @@
                 <h1>Your Code</h1>
 
                 <form>
-                    <textarea rows="20">
-
+                    <textarea rows="20" id="codeEditor">
+def jet(space):
+    return "L" or "R" or "S" or "W"
                     </textarea>
                 </form>
+
             </div>
             <div id="results">
                 <h1>Results</h1>
@@ -161,6 +168,11 @@
     </div>
 </div>
 </div>
-
+<script>
+    var textArea = document.getElementById("codeEditor");
+    var myCodeMirror = CodeMirror(function (elt) {
+        textArea.parentNode.replaceChild(elt, textArea);
+    }, {value: textArea.value, lineNumbers: true, indentUnit: 4});
+</script>
 </body>
 </html>

@@ -42,3 +42,8 @@
 #code textarea{
     width: 100%;
 }
+
+.CodeMirror {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+ }
