@@ -1,9 +1,18 @@
 .main {
-    padding-top: 70px;
+    padding-top: 50px;
+}
+
+.mainbar {
+    height: 100%;
+    border-left: solid darkblue 2px;
+    padding-top: 20px;
 }
 
 .sidebar {
+    padding-top: 20px;
     background-color: #ffffff;
+    position: fixed;
+
 }
 
 .sidebar ul {
@@ -30,3 +39,6 @@
     text-decoration: none;
 }
 
+#code textarea{
+    width: 100%;
+}
